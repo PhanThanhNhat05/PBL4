@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-require('dotenv').config();
+require('dotenv').config({ path: './config.env' });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -17,6 +17,8 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/measurements', require('./routes/measurements'));
 app.use('/api/users', require('./routes/users'));
 app.use('/api/ai', require('./routes/ai'));
+app.use('/api/ml', require('./routes/ml'));
+app.use('/api/history', require('./routes/history'));
 
 // Serve static files from React app
 if (process.env.NODE_ENV === 'production') {
@@ -27,7 +29,7 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// MongoDB connection
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/heart-rate-monitor', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -44,3 +46,5 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/heart-rat
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+

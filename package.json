@@ -8,7 +8,13 @@
     "dev": "nodemon server.js",
     "client": "cd client && npm start",
     "build": "cd client && npm run build",
-    "install-client": "cd client && npm install"
+    "install-client": "cd client && npm install",
+    "db:init": "cd scripts && npm run init",
+    "db:backup": "cd scripts && npm run backup",
+    "db:restore": "cd scripts && npm run restore",
+    "db:status": "cd scripts && npm run status",
+    "db:test": "cd scripts && node test-connection.js",
+    "db:test-atlas": "cd scripts && npm run test-atlas"
   },
   "dependencies": {
     "express": "^4.18.2",
