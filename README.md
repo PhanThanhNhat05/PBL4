@@ -201,10 +201,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 👥 Nhóm thực hiện
 
-- **Từ Đức Mạnh** - Project Manager, AI/ML
-- **Trần Quang Thắng** - Backend Developer
-- **Bùi Quốc Khánh** - Hardware Engineer
-- **Lê Duy Phương Hà** - Frontend Developer
 
 ## 📞 Liên hệ
 
